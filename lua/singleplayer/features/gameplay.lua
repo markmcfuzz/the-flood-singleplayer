@@ -4,12 +4,12 @@
 -- Set of different treason gameplay features
 ------------------------------------------------------------------------------
 -- Lua libraries
-local core = require "multiplayer.features.core"
-local const = require "multiplayer.features.constants"
+local core = require "singleplayer.features.core"
+local const = require "singleplayer.features.constants"
 local glue = require "glue"
 local _, harmony = pcall(require, "mods.harmony")
-local network = require "multiplayer.data.network"
-local core = require "multiplayer.features.core"
+local network = require "singleplayer.data.network"
+local core = require "singleplayer.features.core"
 
 blam.rcon.event("CreateWaypoint", function(message, playerIndex)
     if blam.isGameSAPP() then

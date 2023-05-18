@@ -3,7 +3,7 @@ local glue = require "glue"
 
 local core = {}
 
-local const = require "multiplayer.features.constants"
+local const = require "singleplayer.features.constants"
 
 --- Find the path, index and id of a tag given partial name and tag type
 ---@param partialName string

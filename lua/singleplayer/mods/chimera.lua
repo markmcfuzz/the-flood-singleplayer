@@ -1,6 +1,6 @@
 local glue = require "glue"
 local blam = require "blam"
-local constants = require "multiplayer.features.constants"
+local constants = require "singleplayer.features.constants"
 local ini = require "ini"
 
 local chimera = {}
