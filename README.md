@@ -15,4 +15,6 @@ The multiplayer section is comprised of original maps and remakes of aclaimed cl
 Campaign it's on development
 
 Highlands
-![highlands](images/screenshots/highlands.png)
+![highlands](images/screenshots/highlands_a.png)
+![highlands](images/screenshots/highlands_b.png)
+![highlands](images/screenshots/highlands_c.png)
