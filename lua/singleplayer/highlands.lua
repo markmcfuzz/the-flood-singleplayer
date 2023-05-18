@@ -3,14 +3,14 @@ clua_version = 2.042
 ------------------------------------------------------------------------------
 -- Treason Script Map
 -- Mark Mc'Fuzz
--- This script is intended to provide functions and features to Treason map
+-- This script is intended to provide functions and features for The Flood campaign
 ------------------------------------------------------------------------------
 require "luna"
 blam = require "blam"
 tagClasses = blam.tagClasses
 objectClasses = blam.objectClasses
-local gameplay = require "multiplayer.features.gameplay"
-local dynamicCross = require "multiplayer.features.dynamicCross"
+local gameplay = require "singleplayer.features.gameplay"
+local dynamicCross = require "singleplayer.features.dynamicCross"
 
 function OnRconMessage(message)
     return blam.rcon.handle(message)
@@ -36,7 +36,7 @@ function OnFrame()
     local align = "center"
     local bounds = {left = 0, top = 460, right = 640, bottom = 480}
     local textColor = {1.0, 0.45, 0.72, 1.0}
-    draw_text("thefloodmp-4.1.1", bounds.left, bounds.top, bounds.right, bounds.bottom, font, align,
+    draw_text("thefloodsp-1.0.0-alpha.1", bounds.left, bounds.top, bounds.right, bounds.bottom, font, align,
               table.unpack(textColor))
 end
 
