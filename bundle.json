@@ -1,5 +1,5 @@
 {
-    "name": "Treason",
+    "name": "Highlands",
     "target": "lua53",
     "include": [
         "lua",
@@ -10,13 +10,13 @@
         "glue",
         "blam",
         "luna",
-        "multiplayer.data.network",
-        "multiplayer.features.fontOverride",
-        "multiplayer.features.core",
-        "multiplayer.features.constants",
-        "multiplayer.features.gameplay",
-        "multiplayer.features.dynamicCross"
+        "singleplayer.data.network",
+        "singleplayer.features.fontOverride",
+        "singleplayer.features.core",
+        "singleplayer.features.constants",
+        "singleplayer.features.gameplay",
+        "singleplayer.features.dynamicCross"
     ],
-    "main": "lua/multiplayer/treason",
+    "main": "lua/singleplayer/highlands",
     "output": "dist/treason.lua"
 }
