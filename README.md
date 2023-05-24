@@ -14,7 +14,13 @@ The multiplayer section is comprised of original maps and remakes of aclaimed cl
 
 Campaign it's on development
 
-Highlands
+# The Wilderness Highlands
+
+And all of their kings.
+Humans conquered this deployment plateau , to command Sentinels to defend Alpha Base. The Covenant have disabled the platform, leaving the base defenseless and under attack. Destroy them all.
+Located near the first half of main campaign.
+First look at the Singleplayer Prototype from The Flood: Feet First Into Hell. It's Work In Progress
+
 ![highlands](images/screenshots/highlands_a.png)
 ![highlands](images/screenshots/highlands_b.png)
 ![highlands](images/screenshots/highlands_c.png)
