@@ -1,5 +1,5 @@
 {
-    "name": "Highlands",
+    "name": "The Flood Singleplayer",
     "target": "lua53",
     "include": [
         "lua",
@@ -10,13 +10,14 @@
         "glue",
         "blam",
         "luna",
-        "singleplayer.data.network",
-        "singleplayer.features.fontOverride",
-        "singleplayer.features.core",
-        "singleplayer.features.constants",
-        "singleplayer.features.gameplay",
-        "singleplayer.features.dynamicCross"
+        "the_flood.core",
+        "the_flood.constants",
+        "the_flood.network",
+        "the_flood.gameplay_core.dynamicCross",
+        "the_flood.gameplay_core.hudExtensions",
+        "the_flood.gameplay_core.playerPingObjectives",
+        "the_flood.gameplay_core.healthRegen"
     ],
-    "main": "lua/singleplayer/highlands",
-    "output": "dist/treason.lua"
+    "main": "lua/singleplayer_client",
+    "output": "dist/singleplayer_client.lua"
 }
