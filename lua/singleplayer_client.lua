@@ -8,15 +8,30 @@ require "luna"
 blam = require "blam"
 tagClasses = blam.tagClasses
 objectClasses = blam.objectClasses
-local gameplay = require "the_flood.gameplay"
---local dynamicCross = require "the_flood.gameplayCore.dynamicCross"
---local dynamicCrossV2 = require "multiplayer.features.dynamicCrossV2"
 DebugMode = false
+
+-- Gameplay Core Modules 
+local hudExtensions = require "the_flood.gameplay_core.hudExtensions"
+local healthRegen = require "the_flood.gameplay_core.healthRegen"
+local dynamicCross = require "the_flood.gameplay_core.dynamicCross"
+local playerPingObjectives = require "the_flood.gameplay_core.playerPingObjectives"
+--local sprint = require "the_flood.gameplay_core.sprint"
 
 function OnRconMessage(message)
     return blam.rcon.handle(message)
 end
 
+-- Functions OnTick
+function OnTick()
+    dynamicCross.dynamicReticles()
+    hudExtensions.radarHideOnZoom()
+    hudExtensions.hudBlurOnLowHealth()
+    hudExtensions.changeGreandeSound()
+    healthRegen.regenerateHealth()
+    --playerPingObjectives.pingObjectives()
+end
+
+-- Print version on pause menu
 function OnFrame()
     local isPlayerOnMenu = read_byte(blam.addressList.gameOnMenus) == 1
     if isPlayerOnMenu then

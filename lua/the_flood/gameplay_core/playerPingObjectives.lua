@@ -1,3 +1,12 @@
+-- Lua libraries
+local const = require "the_flood.constants"
+local _, harmony
+if not blam.isGameSAPP() then
+    _, harmony = pcall(require, "mods.harmony")
+end
+local core = require "the_flood.core"
+local network = require "the_flood.network"
+
 local playerPingObjectives = {}
 
 blam.rcon.event("CreateWaypoint", function(message, playerIndex)

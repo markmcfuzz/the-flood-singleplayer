@@ -1,3 +1,7 @@
+-- Lua libraries
+local const = require "the_flood.constants"
+
+
 local hudExtensions = {state = {playerCriticalHealth = false}}
 
 ---Improvements for HUD, hide HUD on zoom
@@ -47,9 +51,13 @@ function hudExtensions.changeGreandeSound()
                 end
             end
         end
+    end
+end
 
 -- Blur HUD vision on critical health
-        function hudExtensions.hudBlurOnLowHealth()
+function hudExtensions.hudBlurOnLowHealth()
+    local player = blam.biped(get_dynamic_player())
+    if (player) then
             if (player.health <= 0.25 and player.shield <= 0 and blam.isNull(player.vehicleObjectId)) then
                 if (not hudExtensions.state.playerCriticalHealth) then
                     hudExtensions.state.playerCriticalHealth = true
@@ -61,7 +69,6 @@ function hudExtensions.changeGreandeSound()
                 end
                 hudExtensions.state.playerCriticalHealth = false
             end
-        end
     elseif hudExtensions.state.playerCriticalHealth then
         hudExtensions.hudBlur(false, true)
         hudExtensions.state.playerCriticalHealth = false

@@ -1,3 +1,6 @@
+-- Lua libraries
+local const = require "the_flood.constants"
+
 local healthRegen = {}
 
 --- Regenerate players health on low shield using game ticks
